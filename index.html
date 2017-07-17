@@ -1,0 +1,21 @@
+<html>
+<head>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/bower_components/lodash/lodash.js"></script>
+  <script type="text/javascript" src="js/bower_components/marked/marked.js"></script>
+  <script type="text/javascript" src="js/vue.min.js"></script>
+  <script type="text/javascript" src="js/bower_components/crypto-js/crypto-js.js"></script>
+  <script type="text/javascript" src="data/data.js"></script>
+  <script type="text/javascript" src="js/cipher.js"></script>
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <title>CypherMD</title>
+</head>
+<body>
+  <div id="editor">
+    <textarea id="markdown" :value="input" @input="update"></textarea>
+    <div v-html="compiledMarkdown"></div>
+    <button id="encrypt"> Encrypt </button>
+    <button id="changepass"> Change Password </button>
+  </div>
+</body>
+</html>
